@@ -1,10 +1,15 @@
 import React from "react";
 import './Articles.css'
 
-const Articles = () => {
+interface ArticlesProps {
+  articles: object[];
+}
+
+const Articles = ({articles}: ArticlesProps) => {
 
   return (
-    <></>
+    <div className="articles-container">
+    </div>
   )
 }
 
