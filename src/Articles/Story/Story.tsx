@@ -1,10 +1,10 @@
 import React from "react";
 
-const Article = () => {
+const Story = () => {
 
   return (
     <h2>Title</h2>
   )
 }
 
-export default Article;
+export default Story;
