@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import topHeadlinesSample from '../mockdata';
+import Articles from '../Articles/Articles';
 import './App.css';
 
 function App() {
-  const [articles, setArticles] = useState({})
+  const [articles, setArticles] = useState<object[]>([])
 
   useEffect(() => {
-    setArticles(topHeadlinesSample)
+    let articlesData:object[] = topHeadlinesSample.articles
+    setArticles(articlesData)
   }, [])
 
   useEffect(()=> {
@@ -16,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <h1>Welcome to NewsFlash ⚡︎</h1>
+      <Articles articles={articles}/>
     </div>
   );
 }
