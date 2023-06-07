@@ -3,11 +3,22 @@ import topHeadlinesSample from '../mockdata';
 import Articles from '../Articles/Articles';
 import './App.css';
 
+interface Details {
+  source: object, 
+  author: string | null,
+  title: string,
+  description: string,
+  url: string,
+  urlToImage: string,
+  publishedAt: string,
+  content: string
+}
+
 function App() {
-  const [articles, setArticles] = useState<object[]>([])
+  const [articles, setArticles] = useState<Details[]>([])
 
   useEffect(() => {
-    let articlesData:object[] = topHeadlinesSample.articles
+    let articlesData:Details[] = topHeadlinesSample.articles
     setArticles(articlesData)
   }, [])
 
