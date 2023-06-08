@@ -9,7 +9,8 @@ import { Switch, Route } from 'react-router-dom';
 import ExpandedStory from '../Articles/ExpandedStory/ExpandedStory';
 
 function App() {
-  const [articles, setArticles] = useState<Details[]>([])
+  const [articles, setArticles] = useState<Details[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     let articlesData:Details[] = topHeadlinesSample.articles
@@ -27,7 +28,7 @@ function App() {
       <Switch>
           <div className="App">
         <Route exact path="/">
-            <Articles articles={articles}/>
+            <Articles articles={articles} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
         </Route>
         <Route path="/:id" render={({match}) => {
             return <ExpandedStory id={match.params.id} articles={articles} />}}/>
