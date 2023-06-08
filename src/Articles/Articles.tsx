@@ -22,11 +22,9 @@ const Articles = ({articles, setSearchTerm, searchTerm}: ArticlesProps) => {
   }).map((article) => {
     return <Story details={article} key={article.title} id={article.publishedAt}/>
   })
-  console.log(searchedStories)
 
   return (
     <main className="articles-outside">
-      {/* <SearchBar setSearchTerm={setSearchTerm}/> */}
       <div className="articles-container">
         {searchTerm ? searchedStories : stories}
       </div>

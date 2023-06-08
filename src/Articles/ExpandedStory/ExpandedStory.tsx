@@ -2,6 +2,7 @@ import React from "react";
 import './ExpandedStory.css';
 import { convertDate } from "../Story/Story";
 import { Details } from "../../interfaces";
+import NotFound from "../../App/NotFound/NotFound";
 
 interface ExpandedStoryProps {
   id: string;
@@ -10,7 +11,6 @@ interface ExpandedStoryProps {
 
 const ExpandedStory = ({id, articles}:ExpandedStoryProps) => {
   const details = articles.find(article => id === article.publishedAt)
-  console.log('expandedstory details', details)
   
   if(details) {
     const {source, author, title, urlToImage, content, publishedAt, url} = details
@@ -29,7 +29,9 @@ const ExpandedStory = ({id, articles}:ExpandedStoryProps) => {
   }
 
   return (
-    <p>Details not found</p>
+    <main className="exp-story">
+      <NotFound />
+    </main>
   )
 
 
