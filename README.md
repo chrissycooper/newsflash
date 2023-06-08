@@ -1,6 +1,6 @@
 ## Abstract:
 
-Stretchtech Project in M3 Turing
+Newsflash is a simple news story browsing application built in about 8 hours with React, Typescript, and React Router v5.
 
 ## Installation Instructions:
 
@@ -10,18 +10,15 @@ Stretchtech Project in M3 Turing
 
 ## Preview of App:
 
+
 ## Context:
 
 ## Contributors:
 
-**[C**. R. Cooper](https://github.com/chrissycooper)
+[Chrissy Cooper](https://github.com/chrissycooper)
 
 ## Learning Goals:
 
 ## Wins + Challenges:
  
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
