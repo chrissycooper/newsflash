@@ -1,17 +1,7 @@
 import React from "react";
 import './Articles.css'
 import Story from "./Story/Story";
-
-interface Details {
-    source: object, 
-    author: string | null,
-    title: string,
-    description: string,
-    url: string,
-    urlToImage: string,
-    publishedAt: string,
-    content: string
-}
+import { Details } from "../interfaces";
 
 interface ArticlesProps {
   articles: Details[];
@@ -20,7 +10,7 @@ interface ArticlesProps {
 const Articles = ({articles}: ArticlesProps) => {
 
   const stories = articles.map(article => {
-    return <Story details={article} />
+    return <Story details={article} key={article.title}/>
   })
 
   return (
