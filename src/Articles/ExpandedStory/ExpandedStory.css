@@ -1,0 +1,8 @@
+.exp-story {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
+}
