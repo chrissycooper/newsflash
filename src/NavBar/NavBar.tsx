@@ -9,7 +9,7 @@ const NavBar = () => {
         <p className="title">Welcome to NewsFlash </p>
         <p className="App-logo">⚡︎</p>
       </div>
-      <Link to="/">Home</Link>
+      <Link to="/"><button>Home</button></Link>
     </div>
   )
 }
