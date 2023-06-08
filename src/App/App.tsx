@@ -22,18 +22,19 @@ function App() {
   }, [])
 
   return (
-    <Switch>
-        <div className="App">
-      <Route exact path="/">
-          <div className='logo-container'>
-            <NavBar />
+    <>
+      <NavBar />
+      <Switch>
+          <div className="App">
+        <Route exact path="/">
+            <Articles articles={articles}/>
+        </Route>
+        <Route path="/:id" render={({match}) => {
+            return <ExpandedStory id={match.params.id} articles={articles} />}}/>
           </div>
-          <Articles articles={articles}/>
-      </Route>
-      <Route path="/:id" render={({match}) => {
-          return <ExpandedStory id={match.params.id} articles={articles} />}}/>
-        </div>
-    </Switch>
+      </Switch>
+    
+    </>
   );
 }
 

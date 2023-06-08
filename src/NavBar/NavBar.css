@@ -2,6 +2,10 @@
   font-size: 3rem;
 }
 
+.title-container{
+  display: flex;
+}
+
 .App-logo {
   font-size: 3rem;
 }
@@ -21,7 +25,7 @@
   }
 } */
 
-.sidebar {
+.navbar {
   width: 100vw;
   height: 10%;
   position: fixed;
@@ -30,6 +34,8 @@
   background-color: rgb(204, 233, 251);
   color: rgb(0, 33, 51);
   z-index: 1;
+  align-items: baseline;
+  justify-content: space-around;
 }
 
 @media screen and (max-width: 600px) {
