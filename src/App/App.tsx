@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import topHeadlinesSample from './mockdata';
 import Articles from '../Articles/Articles';
 import NavBar from '../NavBar/NavBar';
-import NotFound from './NotFound/NotFound';
+import NotFound from '../NotFound/NotFound';
 import { Details } from '../interfaces';
 import getTopHeadlines from '../apicalls';
 import './App.css';

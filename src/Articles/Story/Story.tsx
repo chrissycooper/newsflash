@@ -16,7 +16,7 @@ const convertDate = (published:string) => {
 }
 
 const Story = ({details}:StoryProps) => {
-  const {source, author, title, urlToImage, description, publishedAt} = details
+  const { author, title, urlToImage, description, publishedAt } = details
   
   
   const date: string = convertDate(publishedAt)

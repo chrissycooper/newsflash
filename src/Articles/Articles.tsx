@@ -2,7 +2,7 @@ import React from "react";
 import './Articles.css'
 import { Story } from "./Story/Story";
 import { Details } from "../interfaces";
-import SearchBar from "../SearchBar/SearchBar";
+
 
 interface ArticlesProps {
   articles: Details[];
@@ -10,7 +10,7 @@ interface ArticlesProps {
   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Articles = ({articles, setSearchTerm, searchTerm}: ArticlesProps) => {
+const Articles = ({articles, searchTerm}: ArticlesProps) => {
 
   const stories = articles.map((article) => {
     return <Story details={article} key={article.title} id={article.publishedAt}/>

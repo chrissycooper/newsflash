@@ -8,18 +8,19 @@
 }
 
 .tile-image {
-  height: 200px;
+  width: 350px;
 }
 
 @media screen and (max-width: 600px) {
 
   .story {
-    width: 80%;
+    width: 90%;
     margin: 10px;
     align-content: center;
   }
 
   .tile-image {
    height: 25%;
+   max-width: 700px;
   }
 }
