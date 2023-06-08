@@ -1,6 +1,14 @@
 .articles-container {
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 600px) {
+
+  .articles-container {
+    align-content: center;
+  }
 }
