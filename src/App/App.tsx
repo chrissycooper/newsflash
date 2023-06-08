@@ -1,34 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import topHeadlinesSample from './mockdata';
 import Articles from '../Articles/Articles';
+import SideBar from '../NavBar/NavBar';
+import { Details } from '../interfaces';
+import getTopHeadlines from '../apicalls';
 import './App.css';
-
-interface Details {
-  source: object, 
-  author: string | null,
-  title: string,
-  description: string,
-  url: string,
-  urlToImage: string,
-  publishedAt: string,
-  content: string
-}
 
 function App() {
   const [articles, setArticles] = useState<Details[]>([])
 
   useEffect(() => {
     let articlesData:Details[] = topHeadlinesSample.articles
+    // getTopHeadlines()
+    // .then(data => {
+    //   console.log(data)
+    //   setArticles(data.articles)
+    // })
     setArticles(articlesData)
   }, [])
 
-  useEffect(()=> {
-    console.log('second useeffect', articles)
-  }, [articles])
-
   return (
     <div className="App">
-      <h1>Welcome to NewsFlash ⚡︎</h1>
+      <div className='logo-container'>
+        <SideBar />
+      </div>
       <Articles articles={articles}/>
     </div>
   );
