@@ -1,0 +1,14 @@
+.searchbar {
+  width: 80vw;
+  /* border: 3px orange solid; */
+  /* margin-top: 5%; */
+  height: 5%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.search-btn, .reset-btn {
+  background-color: orange;
+  margin: 5px;
+}

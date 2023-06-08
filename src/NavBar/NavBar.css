@@ -2,6 +2,10 @@
   font-size: 3rem;
 }
 
+.title-container{
+  display: flex;
+}
+
 .App-logo {
   font-size: 3rem;
 }
@@ -21,15 +25,31 @@
   }
 } */
 
-.sidebar {
+.navbar {
   width: 100vw;
   height: 10%;
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   flex-flow: row nowrap;
   background-color: rgb(204, 233, 251);
   color: rgb(0, 33, 51);
   z-index: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button{
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
+.navsearch-container {
+  display: flex;
+  flex-flow: column;
 }
 
 @media screen and (max-width: 600px) {

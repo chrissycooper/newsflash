@@ -1,3 +1,8 @@
+.articles-outside {
+  display: flex;
+  flex-flow: column;
+}
+
 .articles-container {
   padding: 20px;
   display: flex;
