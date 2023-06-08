@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import topHeadlinesSample from '../mockdata';
+import topHeadlinesSample from './mockdata';
 import Articles from '../Articles/Articles';
 import './App.css';
 

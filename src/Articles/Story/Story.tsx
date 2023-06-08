@@ -15,7 +15,7 @@ interface StoryProps {
 }
 
 const Story = ({details}:StoryProps) => {
-
+  const {source, author} = details
   return (
     <div className="story">
       <h2>Title</h2>
