@@ -1,0 +1,14 @@
+.articles-container {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 600px) {
+
+  .articles-container {
+    align-content: center;
+  }
+}

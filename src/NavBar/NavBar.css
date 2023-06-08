@@ -1,0 +1,44 @@
+.title {
+  font-size: 3rem;
+}
+
+.App-logo {
+  font-size: 3rem;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 6s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.sidebar {
+  width: 100vw;
+  height: 10%;
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: rgb(204, 233, 251);
+  color: rgb(0, 33, 51);
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .App-logo {
+    font-size: 2rem;
+  }
+}
