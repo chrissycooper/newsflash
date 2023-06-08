@@ -1,6 +1,6 @@
 import React from "react";
 import './Articles.css'
-import Story from "./Story/Story";
+import { Story } from "./Story/Story";
 import { Details } from "../interfaces";
 
 interface ArticlesProps {
