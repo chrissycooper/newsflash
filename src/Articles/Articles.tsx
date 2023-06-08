@@ -25,12 +25,12 @@ const Articles = ({articles, setSearchTerm, searchTerm}: ArticlesProps) => {
   console.log(searchedStories)
 
   return (
-    <>
-      <SearchBar setSearchTerm={setSearchTerm}/>
+    <main className="articles-outside">
+      {/* <SearchBar setSearchTerm={setSearchTerm}/> */}
       <div className="articles-container">
         {searchTerm ? searchedStories : stories}
       </div>
-    </>
+    </main>
   )
 }
 

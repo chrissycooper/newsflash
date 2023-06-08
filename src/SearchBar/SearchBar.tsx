@@ -11,12 +11,17 @@ const SearchBar = ({setSearchTerm}:SearchBarProps) => {
   const handleSearch = () => {
     setSearchTerm(input)
   }
+  const handleReset = () => {
+    setSearchTerm("")
+    setInput("")
+  }
 
   return (
-    <>
-      <input type="text" onChange={(event)=> {setInput(event?.target.value)}}/>
-      <button onClick={handleSearch}>Go!</button>
-    </>
+    <div className="searchbar">
+      <input type="text" placeholder="Search for something!" value={input} onChange={(event)=> {setInput(event?.target.value)}}/>
+      <button className="search-btn" onClick={handleSearch}>Go!</button>
+      <button className="reset-btn" onClick={handleReset}>Reset Search</button>
+    </div>
   )
 }
 

@@ -28,7 +28,7 @@
 .navbar {
   width: 100vw;
   height: 10%;
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   flex-flow: row nowrap;
   background-color: rgb(204, 233, 251);
@@ -45,6 +45,11 @@ button{
   padding: 10px;
   margin-bottom: 1px;
   cursor: pointer;
+}
+
+.navsearch-container {
+  display: flex;
+  flex-flow: column;
 }
 
 @media screen and (max-width: 600px) {
