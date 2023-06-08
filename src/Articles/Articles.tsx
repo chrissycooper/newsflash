@@ -9,8 +9,8 @@ interface ArticlesProps {
 
 const Articles = ({articles}: ArticlesProps) => {
 
-  const stories = articles.map(article => {
-    return <Story details={article} key={article.title}/>
+  const stories = articles.map((article, index) => {
+    return <Story details={article} key={article.title} id={article.publishedAt}/>
   })
 
   return (

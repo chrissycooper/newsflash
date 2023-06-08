@@ -1,9 +1,11 @@
 import React from "react";
 import './Story.css';
 import { Details } from "../../interfaces";
+import { Link } from "react-router-dom";
 
 interface StoryProps {
-  details: Details
+  details: Details;
+  id: string;
 }
 
 const convertDate = (published:string) => {
@@ -23,9 +25,10 @@ const Story = ({details}:StoryProps) => {
     <div className="story">
       <h2>{title}</h2>
       <img src={urlToImage} alt="" className="tile-image"/>
-      <h3>by {author ? author : "unknown" } via {source.name}</h3>
+      <h3>by {author ? author : "unknown" }</h3>
       <p>date: {date}</p>
       <p>{description?.slice(0, 150)}{"..."}</p>
+      <Link to={`/${publishedAt}`}>Read More</Link>
     </div>
   )
 }
