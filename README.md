@@ -14,7 +14,7 @@ The data is being gathered from the [News API](https://newsapi.org/).
 Since this was a simple application built solo on a limited timeline, I kept my planning simple as well. I utilized the GitHub issues to collect user stories and covert them into a task list. 
 
 ## Preview of App:
-
+![gif of application](https://media.giphy.com/media/ANErF1HzypX135kmWN/giphy.gif)
 
 ## Contributors:
 
