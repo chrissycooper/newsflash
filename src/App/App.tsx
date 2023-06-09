@@ -3,8 +3,8 @@ import topHeadlinesSample from './mockdata';
 import Articles from '../Articles/Articles';
 import NavBar from '../NavBar/NavBar';
 import NotFound from '../NotFound/NotFound';
-import { Details } from '../interfaces';
-import getTopHeadlines from '../apicalls';
+import { Details } from '../utilities/interfaces';
+import getTopHeadlines from '../utilities/apicalls';
 import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import ExpandedStory from '../Articles/ExpandedStory/ExpandedStory';
@@ -17,7 +17,6 @@ function App() {
   useEffect(() => {
     getTopHeadlines()
     .then(data => {
-      console.log(data)
       setArticles(data.articles)
     })
     .catch(err => setError(err.message))

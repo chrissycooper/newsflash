@@ -1,6 +1,6 @@
 import React from "react";
 import './Story.css';
-import { Details } from "../../interfaces";
+import { Details } from "../../utilities/interfaces";
 import { Link } from "react-router-dom";
 
 interface StoryProps {

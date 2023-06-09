@@ -1,7 +1,8 @@
 import React from "react";
 import './Articles.css'
 import { Story } from "./Story/Story";
-import { Details } from "../interfaces";
+import { Details } from "../utilities/interfaces";
+import NotFound from "../NotFound/NotFound";
 
 
 interface ArticlesProps {
@@ -27,6 +28,7 @@ const Articles = ({articles, searchTerm}: ArticlesProps) => {
     <main className="articles-outside">
       <div className="articles-container">
         {searchTerm ? searchedStories : stories}
+        {!searchedStories.length && <NotFound />}
       </div>
     </main>
   )

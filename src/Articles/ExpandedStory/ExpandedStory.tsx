@@ -1,7 +1,7 @@
 import React from "react";
 import './ExpandedStory.css';
 import { convertDate } from "../Story/Story";
-import { Details } from "../../interfaces";
+import { Details } from "../../utilities/interfaces";
 import NotFound from "../../NotFound/NotFound";
 
 interface ExpandedStoryProps {

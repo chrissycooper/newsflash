@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.css";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "./SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 
 interface NavBarProps {
