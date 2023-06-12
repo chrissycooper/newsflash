@@ -1,10 +1,16 @@
 import React from "react";
-import './NotFound.css';
+import "./NotFound.css";
 
-const NotFound = () => {
+interface NotFoundProps {
+  error?: string;
+}
+
+const NotFound = ({error}:NotFoundProps) => {
+  let message = "";
+  error ? message = error : message = "Uh Oh, something unexpected happened. Try refreshing the page.";
   return (
     <div className="err-message">
-      <p>Uh Oh, something unexpected happened</p>
+      <p>{message}</p>
     </div>
   )
 }

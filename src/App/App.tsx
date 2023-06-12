@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import topHeadlinesSample from './mockdata';
-import Articles from '../Articles/Articles';
-import NavBar from '../NavBar/NavBar';
-import NotFound from '../NotFound/NotFound';
-import { Details } from '../utilities/interfaces';
-import getTopHeadlines from '../utilities/apicalls';
-import './App.css';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import ExpandedStory from '../Articles/ExpandedStory/ExpandedStory';
+import React, { useState, useEffect } from "react";
+import topHeadlinesSample from "./mockdata";
+import Articles from "../Articles/Articles";
+import NavBar from "../NavBar/NavBar";
+import NotFound from "../NotFound/NotFound";
+import { Details } from "../utilities/interfaces";
+import getTopHeadlines from "../utilities/apicalls";
+import "./App.css";
+import { Switch, Route, Redirect } from "react-router-dom";
+import ExpandedStory from "../Articles/ExpandedStory/ExpandedStory";
 
 function App() {
   const [articles, setArticles] = useState<Details[]>([]);
@@ -27,24 +27,24 @@ function App() {
   return (
     <>
       <NavBar setSearchTerm={setSearchTerm}/>
-    {error ? <NotFound /> : 
-      <Switch>
-        <Route exact path="/">
-            <Articles articles={articles} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-        </Route>
-        <Route path="/:id" render={({match}) => {
-            return <ExpandedStory id={match.params.id} articles={articles} />}}
-        />
-        <Route path="/not-found">
-              <NotFound />
+      {error ? <NotFound error={error}/> : 
+        <Switch>
+          <Route exact path="/">
+              <Articles articles={articles} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
           </Route>
-        <Route path="/*">
-            <Redirect to={'/not-found'}/>
-          </Route>
-      </Switch>
-     }
+          <Route path="/:id" render={({match}) => {
+              return <ExpandedStory id={match.params.id} articles={articles} />}}
+          />
+          <Route path="/not-found">
+                <NotFound />
+            </Route>
+          <Route path="/*">
+              <Redirect to={"/not-found"}/>
+            </Route>
+        </Switch>
+      }
     </>
   );
-}
+};
 
 export default App;

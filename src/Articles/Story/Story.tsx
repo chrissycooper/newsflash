@@ -16,10 +16,10 @@ const convertDate = (published:string) => {
 }
 
 const Story = ({details}:StoryProps) => {
-  const { author, title, urlToImage, description, publishedAt } = details
+  const { author, title, urlToImage, description, publishedAt } = details;
   
   
-  const date: string = convertDate(publishedAt)
+  const date: string = convertDate(publishedAt);
   
   return (
     <div className="story">
