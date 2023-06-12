@@ -1,20 +1,20 @@
 import React from "react";
 import './ExpandedStory.css';
 import { convertDate } from "../Story/Story";
-import { Details } from "../../interfaces";
+import { Details } from "../../utilities/interfaces";
+import NotFound from "../../NotFound/NotFound";
 
 interface ExpandedStoryProps {
   id: string;
-  articles: Details[]
+  articles: Details[];
 }
 
 const ExpandedStory = ({id, articles}:ExpandedStoryProps) => {
   const details = articles.find(article => id === article.publishedAt)
-  console.log('expandedstory details', details)
   
   if(details) {
-    const {source, author, title, urlToImage, content, publishedAt, url} = details
-    const date: string = convertDate(publishedAt)
+    const {source, author, title, urlToImage, content, publishedAt, url} = details;
+    const date: string = convertDate(publishedAt);
 
     return (
       <main className="exp-story">
@@ -25,14 +25,14 @@ const ExpandedStory = ({id, articles}:ExpandedStoryProps) => {
         <p>{content}</p>
         <a href={url} target="blank">Read More at {source.name}</a>
       </main>
-    )
-  }
+    );
+  };
 
   return (
-    <p>Details not found</p>
-  )
-
-
-}
+    <main className="exp-story">
+      <NotFound />
+    </main>
+  );
+};
 
 export default ExpandedStory;

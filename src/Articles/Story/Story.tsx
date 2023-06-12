@@ -1,6 +1,6 @@
 import React from "react";
 import './Story.css';
-import { Details } from "../../interfaces";
+import { Details } from "../../utilities/interfaces";
 import { Link } from "react-router-dom";
 
 interface StoryProps {
@@ -16,10 +16,10 @@ const convertDate = (published:string) => {
 }
 
 const Story = ({details}:StoryProps) => {
-  const {source, author, title, urlToImage, description, publishedAt} = details
+  const { author, title, urlToImage, description, publishedAt } = details;
   
   
-  const date: string = convertDate(publishedAt)
+  const date: string = convertDate(publishedAt);
   
   return (
     <div className="story">

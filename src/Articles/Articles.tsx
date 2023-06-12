@@ -1,8 +1,9 @@
 import React from "react";
-import './Articles.css'
+import "./Articles.css"
 import { Story } from "./Story/Story";
-import { Details } from "../interfaces";
-import SearchBar from "../SearchBar/SearchBar";
+import { Details } from "../utilities/interfaces";
+import NotFound from "../NotFound/NotFound";
+
 
 interface ArticlesProps {
   articles: Details[];
@@ -10,7 +11,7 @@ interface ArticlesProps {
   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Articles = ({articles, setSearchTerm, searchTerm}: ArticlesProps) => {
+const Articles = ({articles, searchTerm}: ArticlesProps) => {
 
   const stories = articles.map((article) => {
     return <Story details={article} key={article.title} id={article.publishedAt}/>
@@ -22,16 +23,17 @@ const Articles = ({articles, setSearchTerm, searchTerm}: ArticlesProps) => {
   }).map((article) => {
     return <Story details={article} key={article.title} id={article.publishedAt}/>
   })
-  console.log(searchedStories)
+
+  const errorMessage = "No articles were found matching that search term.";
 
   return (
     <main className="articles-outside">
-      {/* <SearchBar setSearchTerm={setSearchTerm}/> */}
       <div className="articles-container">
         {searchTerm ? searchedStories : stories}
+        {!searchedStories.length && <NotFound error={errorMessage}/>}
       </div>
     </main>
-  )
-}
+  );
+};
 
 export default Articles;
